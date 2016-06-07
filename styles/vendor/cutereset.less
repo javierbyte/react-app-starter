@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  padding-left: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cf {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-start {
+  align-items: flex-start;
+}
+.flex-align-stretch {
+  align-items: stretch;
+}
+.flex-content-center {
+  flex-content: center;
+}
+.flex-justify-center {
+  justify-content: center;
+}
+
+.generate-paddings(@n, @i: 1) when (@i =< @n) {
+  .margin-@{i} {
+    margin: @i rem;
+  }
+  .padding-@{i} {
+    padding: @i * 1rem;
+  }
+  .padding-top-@{i} {
+    padding-top: @i * 1rem;
+  }
+  .margin-top-@{i} {
+    margin-top: @i * 1rem;
+  }
+  .padding-left-@{i} {
+    padding-left: @i * 1rem;
+  }
+  .margin-left-@{i} {
+    margin-left: @i * 1rem;
+  }
+  .padding-right-@{i} {
+    padding-right: @i * 1rem;
+  }
+  .margin-right-@{i} {
+    margin-right: @i * 1rem;
+  }
+  .padding-bottom-@{i} {
+    padding-bottom: @i * 1rem;
+  }
+  .margin-bottom-@{i} {
+    margin-bottom: @i * 1rem;
+  }
+  .generate-paddings(@n, (@i + 1));
+}
+.generate-paddings(4);
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.127;
+  margin-top: 0;
+  margin-bottom: 0.309rem;
+}
+
+h1 {
+  font-size: 4.23em;
+}
+h2 {
+  font-size: 2.617em;
+}
+h3 {
+  font-size: 1.618em;
+}
+h4 {
+  font-size: 1.272em;
+}
+h5 {
+  font-size: 1.127em;
+}
+h6 {
+  font-size: 1em;
+}

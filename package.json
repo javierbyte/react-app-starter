@@ -1,13 +1,12 @@
 {
   "name": "DONTFORGETTOSETUPTHIS",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
-    "start": "node webpack/devServer.js",
-    "lint": "eslint src"
+    "start": "node webpack/devServer.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,10 @@
     "cross-env": "^1.0.7",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.13.3",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "raw-loader": "^0.5.1",
     "rimraf": "^2.4.3",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
