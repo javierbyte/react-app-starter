@@ -3,6 +3,7 @@
 * React.
 * React-Transform (hot reload).
 * Uglify.
+* Less.
 
 ## Getting started.
 
