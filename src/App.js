@@ -15,10 +15,12 @@ const App = React.createClass({
   getChildContext() {
     return {
       contextState: this.state,
+      updateContextState: this.updateContextState
     }
   },
 
   updateContextState(newState, callback) {
+    console.warn('\nCONTEXT UPDATE', newState)
     this.setState(newState, callback)
   },
 
